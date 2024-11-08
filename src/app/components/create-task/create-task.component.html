@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="container">
+    <ion-label style="font-family: monospace; font-size: 2em; font-weight: 900"
+      >Create Task</ion-label
+    >
+    <div close="close-icon" class="close" (click)="dismissmodal()">
+      <ion-icon name="close" ></ion-icon>
+    </div>
+  </div>
+  <form action="">
+    <ion-card>
+      <ion-item>
+        <ion-input placeholder="Task Name"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-textarea  rows="5" placeholder="Enter the description"></ion-textarea>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-select label="Periority">
+          <ion-select-option *ngFor="let Per of periority" [value]="Per">{{Per}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime [presentation]="'time'"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+  </form>
+</ion-content>

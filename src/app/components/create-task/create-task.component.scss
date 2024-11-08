@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding: 1em;
+}
+.close{
+    font-size: 2em;
+    &:hover{
+        cursor: pointer;
+    }
+}
