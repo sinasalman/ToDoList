@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StylingComponent } from './components/styling/styling.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
-  declarations: [AppComponent, CreateTaskComponent,StylingComponent],
+  declarations: [AppComponent, CreateTaskComponent,StylingComponent,CategoryComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

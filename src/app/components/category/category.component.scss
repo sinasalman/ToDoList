@@ -1,4 +1,4 @@
-.colorPicker{
+.circles{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -10,15 +10,15 @@
     }
 }
 .centering{
-   
+    width: 100vw;
     display: flex;
     justify-content: center;
     
 }
-.SelectedColor{
+.SelectedIcon{
     scale: (1.1);
-    border-top: 3px solid #d9cfdef3;
-    animation: godAnimation 1.2s linear infinite;
+    color: #9f15c9;
+    
 }
 @keyframes godAnimation{
     0%{

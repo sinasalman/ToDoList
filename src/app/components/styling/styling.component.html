@@ -1,7 +1,7 @@
-<ion-list line="none" class="centering">
+<ion-list lines="none" class="centering">
   <ion-item>
     <ion-row>
-      <div class="colorPicker" *ngFor="let color of theme" [style.background-color]="color" (click)="selectColor(color)"></div>
+      <div class="colorPicker" *ngFor="let color of theme" [style.background-color]="color" (click)="selectColor(color)" [ngClass]="{ SelectedColor : selectedColor===color}"></div>
     </ion-row>
   </ion-item>
 

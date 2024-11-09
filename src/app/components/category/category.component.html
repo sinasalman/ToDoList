@@ -1,0 +1,14 @@
+<ion-list lines="none"  class="center-list">
+  <ion-item >
+    <ion-row>
+      <ion-col *ngFor="let icon of icons">
+
+        <div class="circles "  [style.background-color]="icon"
+         (click)="SelectCategory(icon)" [class.SelectedIcon]="selectedIcon=== icon ">
+         <ion-icon [name]="icon"  size="large" ></ion-icon>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</ion-list>
