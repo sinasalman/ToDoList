@@ -1,0 +1,17 @@
+.colorPicker{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 150ms ease-in;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+.centering{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
