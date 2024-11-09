@@ -1,7 +1,39 @@
-<ion-content [fullscreen]="true">
-  <ion-fab horizontal="end" vertical="bottom" >
-    <ion-fab-button (click)="addtasks()" style="--background: rgba(58, 21, 78, 0.922); ">
-      <ion-icon name="add" style="color: rgb(255, 255, 255);"></ion-icon>
+<ion-content [fullscreen]="true" >
+  <ion-list *ngFor="let task of todoList" [style.background-color]="bgc">
+    <ion-card [style.background-color]="task.value.theme">
+      <div class="container">
+        <div class="Category">
+          <ion-icon [name]="task.value.icon" size="large"> </ion-icon>
+        </div>
+        <div class="Data">
+          <h2>{{task.value.Title}}</h2>
+          <p>{{task.value.description}}</p>
+        </div>
+        <div class="periority" *ngIf="task.value.Periority==='important' ">
+          <ion-chip
+            ><p><ion-icon name="flag" color="danger"></ion-icon></p
+          ></ion-chip>
+        </div>
+        <div class="periority" *ngIf="task.value.Periority==='usual' ">
+          <ion-chip
+            ><p><ion-icon name="flag" color="danger"></ion-icon></p
+          ></ion-chip>
+        </div>
+        <div class="periority" *ngIf="task.value.Periority==='fun' ">
+          <ion-chip
+            ><p><ion-icon name="flag" color="tertiary"></ion-icon></p
+          ></ion-chip>
+        </div>
+        <ion-button (click)="deleteTask(task.key)" color="danger" size="small" horizontal="end"><ion-icon name="close"></ion-icon></ion-button>
+      </div>
+    </ion-card>
+  </ion-list>
+  <ion-fab horizontal="end" vertical="bottom" translucent="true">
+    <ion-fab-button
+      (click)="addtasks()"
+      style="--background: rgba(58, 21, 78, 0.922)"
+    >
+      <ion-icon name="add" style="color: rgb(255, 255, 255)"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>

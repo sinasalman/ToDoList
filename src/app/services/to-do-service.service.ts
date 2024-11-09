@@ -9,7 +9,7 @@ export class ToDoServiceService {
     this.init();
    }
    async init(){
-    const storage = await this.storage.create()
+    this.storage = await this.storage.create()
    }
    addTask( key:any , value:any){
     return this.storage.set(key,value);
@@ -30,7 +30,7 @@ export class ToDoServiceService {
     let item=this.storage.get(key);
     return item;
    }
-   async deletTask(key:string){
+   async deleteTask(key:string){
     return await this.storage.remove(key);
    }
    
